@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyatt's Lab 4 Website</title>
+    <style>
+        body {
+            background-color: #9370DB; /* medium purple */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            color: #ffffff;
+        }
+        p {
+            font-size: 18px;
+            color: #f5f5f5;
+        }
+        img {
+            margin: 15px 0;
+            width: 120px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background-color: #f9f9f9;
+        }
+        button:hover {
+            background-color: #d1d1d1;
+        }
+    </style>
+</head>
 <body>
 
-<h2>Simple Web Page with HTML and JavaScript</h2>
+    <h2>Welcome to Wyatt's Interactive Web Page</h2>
 
-<p>JavaScript can change HTML attribute values.</p>
+    <p>This page demonstrates how JavaScript can change the <strong>src attribute</strong> of an image.  
+    Click the buttons below to turn the lightbulb on and off.</p>
 
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">💡 Turn On the Light</button>
 
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+    <img id="myImage" src="pic_bulboff.gif" alt="Light Bulb">
 
-<img id="myImage" src="pic_bulboff.gif" style="width:100px">
-
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">💡 Turn Off the Light</button>
 
 </body>
 </html>
+
